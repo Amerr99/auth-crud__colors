@@ -34,6 +34,7 @@ class _SignUpState extends State<SignUp> {
                 UserCredential user = await FirebaseAuth.instance
                     .createUserWithEmailAndPassword(
                         email: email.text, password: password.text);
+
                 ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(content: Text("user created")));
                 Navigator.pushNamed(context, "log-in");

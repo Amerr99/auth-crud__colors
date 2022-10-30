@@ -1,6 +1,4 @@
 import 'package:colors/firebase_options.dart';
-import 'package:colors/screens/blue.dart';
-import 'package:colors/screens/green.dart';
 import 'package:colors/screens/login.dart';
 import 'package:colors/screens/mix.dart';
 import 'package:colors/screens/read.dart';
@@ -15,9 +13,9 @@ void main() async {
   runApp(MaterialApp(routes: {
     "read": (context) => const Home(),
     "mix": (context) => const Mix(),
-    "green": (context) => const Green(),
-    "blue": (context) => const Blue(),
-    "red": (context) => const Red(),
+    "green": (context) => Red(Colors.green),
+    "blue": (context) => Red(Colors.blue),
+    "red": (context) => Red(Colors.red),
     "log-in": (context) => const Login(),
   }, home: MyApp()));
 }
@@ -27,6 +25,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Blue();
+    return Login();
   }
 }
